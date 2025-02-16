@@ -26,13 +26,14 @@
         nav {
             background-color: #333;
             overflow: hidden;
+            text-align: center;
         }
         nav a {
             color: white;
             padding: 14px 20px;
-            text-align: center;
             text-decoration: none;
             display: inline-block;
+            cursor: pointer;
         }
         nav a:hover {
             background-color: #ddd;
@@ -44,7 +45,11 @@
             padding: 20px;
         }
         section {
+            display: none;
             margin-bottom: 50px;
+        }
+        .active {
+            display: block;
         }
         .rounded-box {
             background-color: #eef;
@@ -61,6 +66,12 @@
             bottom: 0;
             width: 100%;
         }
+        .home-gallery img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -71,12 +82,22 @@
 </header>
 
 <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About Us</a>
+    <a onclick="showSection('services')">Services</a>
+    <a onclick="showSection('contact')">Contact</a>
 </nav>
 
 <div class="container">
+    <section id="home" class="active">
+        <h2>Welcome to D&N Transport</h2>
+        <div class="home-gallery">
+            <img src="image1.jpg" alt="D&N Transport Fleet">
+            <img src="image2.jpg" alt="Logistics in Action">
+            <img src="image3.jpg" alt="Safe and Secure Delivery">
+        </div>
+    </section>
+
     <section id="about">
         <h2>About Us</h2>
         <p>D&N Transport is a leading provider of reliable and efficient transportation services. With years of experience in the logistics industry, we specialize in offering tailored solutions for businesses of all sizes. Our mission is to provide on-time, cost-effective, and secure transportation to meet the needs of our clients.</p>
@@ -110,6 +131,15 @@
 <footer>
     <p>&copy; 2025 D&N Transport. All rights reserved.</p>
 </footer>
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
