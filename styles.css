@@ -65,10 +65,11 @@ footer {
 }
 
 .home-gallery img {
-    width: 45%; /* Adjust size for better spacing */
-    max-width: 500px; /* Prevents overly large images */
-    border-radius: 10px;
-    object-fit: cover; /* Ensures images are nicely scaled */
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    margin: 0;
+    display: block;
 }
 
 /* Responsive Design */
