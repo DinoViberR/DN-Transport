@@ -55,6 +55,20 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.home-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.home-gallery img {
+    width: 45%; /* Adjust size for better spacing */
+    max-width: 500px; /* Prevents overly large images */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures images are nicely scaled */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
