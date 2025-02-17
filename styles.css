@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-.logo { position: absolute; top: 10px; left: 10px; height: 50px; }
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    padding-bottom: 60px; /* Prevents footer overlap */
 }
 
 header {
@@ -17,6 +17,14 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative; /* Ensure header content is positioned properly */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
 }
 
 nav {
@@ -55,7 +63,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    left: 0; /* Make sure footer stretches across the page */
 }
+
+/* Gallery Styling */
 .home-gallery {
     display: flex;
     justify-content: center;
@@ -66,9 +77,10 @@ footer {
 
 .home-gallery img {
     width: 100%;
-    max-width: none;
-    border-radius: 0;
-    margin: 0;
+    max-width: 100%; /* Ensures images do not exceed container width */
+    height: auto;
+    border-radius: 10px; /* Optional, for rounded corners */
+    margin: 10px 0;
     display: block;
 }
 
@@ -85,5 +97,9 @@ footer {
 
     footer {
         padding: 5px;
+    }
+
+    .logo {
+        height: 40px; /* Adjust logo size on smaller screens */
     }
 }
