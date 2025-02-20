@@ -16,6 +16,8 @@
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+              font-size: 18px;
+    line-height: 1.6;
         }
         header {
             background-color: royalblue;
@@ -28,26 +30,32 @@
             overflow: hidden;
             text-align: center;
         }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+       nav a {
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+nav a:hover {
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+}
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         section {
-            display: none;
-            margin-bottom: 50px;
-        }
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.active {
+    opacity: 1;
+}
         .active {
             display: block;
         }
@@ -58,20 +66,25 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
         .home-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
+    display: block;
+    max-width: 600px; /* Adjust width */
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+        .logo {
+    width: 150px; /* Adjust size */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
     </style>
 </head>
 <body>
@@ -98,7 +111,12 @@
             <img src="images/file-QruUGDpMXT5vWH2J5NLu5x.webp" alt="Logistics in Action">
         </div>
     </section>
-
+<form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+</form>
     <section id="about">
         <h2>About Us</h2>
         <p>D&N Transport is a leading provider of reliable and efficient transportation services. With years of experience in the logistics industry, we specialize in offering tailored solutions for businesses of all sizes. Our mission is to provide on-time, cost-effective, and secure transportation to meet the needs of our clients.</p>
