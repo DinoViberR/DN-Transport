@@ -60,6 +60,18 @@ nav a:hover {
     border-radius: 10px;
 }
 
+/* Section Styling for Visibility */
+section {
+    display: none; /* Initially hide all sections */
+    opacity: 0; /* Hide sections */
+    transition: opacity 0.5s ease-in-out;
+}
+
+section.active {
+    display: block; /* Show active section */
+    opacity: 1; /* Make active section visible */
+}
+
 /* Contact Section Fix */
 #contact {
     text-align: center; /* Center the text */
