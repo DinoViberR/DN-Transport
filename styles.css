@@ -1,12 +1,11 @@
-/* Contact Section Fix */
 #contact {
-    text-align: left; /* Align text to the left */
-    padding: 20px 0; /* Reduce top and bottom padding for better placement */
-    margin-top: 10px; /* Add a small margin to separate it from the nav */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Adjust top and bottom padding */
+    margin-top: 10px; /* Slight space between navigation and contact section */
 }
 
 #contact h2 {
-    margin-bottom: 20px; /* Spacing between title and content */
+    margin-bottom: 20px; /* Space between title and content */
 }
 
 #contact p {
@@ -15,7 +14,7 @@
 
 /* Form Container Styling */
 .form-container {
-    margin-top: 20px; /* Adjusted margin for better form positioning */
+    margin-top: 20px; /* Space between text and form */
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -23,5 +22,5 @@
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    text-align: left; /* Keep the form's text aligned left */
 }
