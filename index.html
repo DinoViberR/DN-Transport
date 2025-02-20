@@ -13,177 +13,99 @@
         
         body {
             font-family: 'Oswald', sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-              font-size: 18px;
-    line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.6;
+            background: url('images/file-QruUGDpMXT5vWH2J5NLu5x.webp') no-repeat center center fixed;
+            background-size: cover;
         }
+        
         header {
-            background-color: royalblue;
+            background-color: rgba(65, 105, 225, 0.8);
             color: white;
             padding: 20px;
             text-align: center;
         }
+        
         nav {
             background-color: #333;
-            overflow: hidden;
             text-align: center;
+            padding: 10px 0;
         }
-       nav a {
-    color: white;
-    padding: 14px 25px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-nav a:hover {
-    background-color: royalblue;
-    color: white;
-    border-radius: 5px;
-}
+        
+        nav a {
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        nav a:hover {
+            background-color: royalblue;
+            color: white;
+            border-radius: 5px;
+        }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        
         section {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-.active {
-    opacity: 1;
-}
-        .active {
-            display: block;
-        }
-        .rounded-box {
-            background-color: #eef;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
             padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-        footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-        .home-gallery img {
-    display: block;
-    max-width: 600px; /* Adjust width */
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-        .logo {
-    width: 150px; /* Adjust size */
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-}
-/* Contact Form Styling */
-.form-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.form-container h3 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.form-container input,
-.form-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-container textarea {
-    height: 120px;
-    resize: none;
-}
-
-.form-container button {
-    background-color: royalblue;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.form-container button:hover {
-    background-color: darkblue;
-}
-
+        
+        .active {
+            opacity: 1;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="" class="logo">
     <h1>D&N Transport</h1>
     <p>Sicherheit und vertrauen in jeder bewegung</p>
 </header>
 
-
 <nav>
     <a onclick="showSection('home')">Home</a>
     <a onclick="showSection('about')">About Us</a>
-    <a onclick="showSection('services')">Services</a>
     <a onclick="showSection('contact')">Contact</a>
 </nav>
 
 <div class="container">
     <section id="home" class="active">
-        <div class="home-gallery">
-            <img src="images/file-QruUGDpMXT5vWH2J5NLu5x.webp" alt="Logistics in Action">
-        </div>
+        <h2>Welcome to D&N Transport</h2>
+        <p>Reliable and secure transportation solutions.</p>
     </section>
     <section id="about">
         <h2>About Us</h2>
-        <p>D&N Transport is a leading provider of reliable and efficient transportation services. With years of experience in the logistics industry, we specialize in offering tailored solutions for businesses of all sizes. Our mission is to provide on-time, cost-effective, and secure transportation to meet the needs of our clients.</p>
+        <p>We specialize in providing efficient and cost-effective transport services.</p>
     </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: dntransport.info@gmail.com</p>
+        <p>Phone: +49 176 419 56993</p>
+    </section>
+</div>
 
-   <section id="contact" class="rounded-box">
-    <h2>Contact Us</h2>
-    <p>If you are interested in our services, please reach out to us!</p>
-    <ul>
-        <li>Email: dntransport.info@gmail.com</li>
-        <li>Facebook: D&N Transport</li>
-        <li>Nino: +49 176 419 56993</li>
-        <li>Dino: +49 255 655 05939</li>
-        <li>Germany</li>
-    </ul>
-
-    <!-- Contact Form -->
-    <div class="form-container">
-        <h3>Send Us a Message</h3>
-        <form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</section>
-
-
-<footer>
+<footer class="footer">
     <p>&copy; 2025 D&N Transport. All rights reserved.</p>
 </footer>
 
