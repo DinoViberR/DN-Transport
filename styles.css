@@ -72,13 +72,15 @@ nav a:hover {
     justify-content: center;
 }
 
-/* Section Styling for Visibility */
+/* Ensure sections are properly aligned and transition correctly */
 section {
-    display: none; /* Initially hide all sections */
+    width: 100%;
+    display: none; /* Hide all sections by default */
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
+/* Only the active section is visible */
 section.active {
     display: block; /* Show active section */
     opacity: 1;
