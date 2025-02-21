@@ -61,11 +61,13 @@ nav a:hover {
 /* Main Content */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    width: 90%; /* Ensures it scales well on all devices */
+    margin: 20px auto; /* Keeps spacing around the content */
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    flex: 1; /* Ensures content pushes footer down */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 60vh; /* Ensures a minimum height for better background visibility */
 }
 
 /* Section Styling for Visibility */
