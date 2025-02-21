@@ -20,6 +20,7 @@ body {
     background: url('images/file-8Z54pimwsPg1CeewwXTNyU.webp') no-repeat center center fixed;
     background-size: cover;
 }
+
 /* Header */
 header {
     background-color: rgba(76, 175, 80, 0.9);
@@ -40,7 +41,8 @@ header {
 /* Navigation */
 nav {
     background-color: #333;
-    text-align: center;
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Centers the items horizontally */
     padding: 10px 0;
 }
 
@@ -78,11 +80,16 @@ section {
     display: none; /* Hide all sections by default */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    text-align: center; /* Centers the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures the section takes up full height of the container */
 }
 
 /* Only the active section is visible */
 section.active {
-    display: block; /* Show active section */
+    display: flex; /* Show active section */
     opacity: 1;
 }
 
@@ -110,6 +117,7 @@ section.active {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left; /* Keeps form fields aligned left */
 }
+
 /* Footer - Stays at Bottom */
 footer {
     background-color: #333;
