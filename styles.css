@@ -79,7 +79,7 @@ section {
     width: 100%;
     display: none; /* Hide all sections by default */
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: none; /* Remove any transition effects */
     text-align: center; /* Centers the text */
     display: flex;
     justify-content: center;
