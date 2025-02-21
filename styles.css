@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Ensure Full Page Height */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Body Styling */
 body {
     font-family: 'Oswald', sans-serif;
@@ -58,38 +65,39 @@ nav a:hover {
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
+    flex: 1; /* Ensures content pushes footer down */
 }
 
 /* Section Styling for Visibility */
 section {
     display: none; /* Initially hide all sections */
-    opacity: 0; /* Hide sections */
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
 section.active {
     display: block; /* Show active section */
-    opacity: 1; /* Make active section visible */
+    opacity: 1;
 }
 
-/* Contact Section Fix */
+/* Contact Section */
 #contact {
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Adjust top and bottom padding */
-    margin-top: 10px; /* Slight space between navigation and contact section */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10px;
 }
 
 #contact h2 {
-    margin-bottom: 20px; /* Space between title and content */
+    margin-bottom: 20px;
 }
 
 #contact p {
     margin-bottom: 10px;
 }
 
-/* Form Container Styling */
+/* Form Container */
 .form-container {
-    margin-top: 20px; /* Space between text and form */
+    margin-top: 20px;
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -97,18 +105,18 @@ section.active {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left; /* Keep the form's text aligned left */
+    text-align: left;
 }
 
-/* Footer */
+/* Footer - Sticks to Bottom */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    font-size: 14px; /* Make copyright text smaller */
+    font-size: 14px;
     padding: 10px;
-    position: relative; /* Change from fixed to prevent overlap */
     width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
 
 /* Responsive Design */
