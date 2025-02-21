@@ -188,13 +188,18 @@
     <!-- Add the JavaScript function here -->
 <script>
     function showSection(sectionId) {
-        // Hide all sections
+        // Hide all sections instantly
         document.querySelectorAll('section').forEach(section => {
-            section.classList.remove('active');
+            section.style.display = 'none'; // Instantly hide sections
+            section.classList.remove('active'); // Remove active class
         });
 
         // Show the selected section
-        document.getElementById(sectionId).classList.add('active');
+        const activeSection = document.getElementById(sectionId);
+        activeSection.style.display = 'block'; // Make it visible
+        setTimeout(() => {
+            activeSection.classList.add('active'); // Apply fade-in smoothly
+        }, 10);
     }
 </script>
 
