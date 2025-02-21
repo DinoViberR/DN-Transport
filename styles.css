@@ -10,12 +10,6 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: url('images/file-8Z54pimwsPg1CeewwXTNyU.webp') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Body Styling */
-body {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -27,39 +21,34 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    position: relative;
-}
-
-/* Logo */
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 50px;
 }
 
 /* Navigation */
 nav {
     background-color: #333;
-    display: flex; /* Use flexbox to align items */
-    justify-content: center; /* Centers the items horizontally */
+    display: flex;
+    justify-content: center;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
     color: white;
     padding: 14px 20px;
     text-decoration: none;
-    display: inline-block;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: royalblue;
+    color: white;
     border-radius: 5px;
 }
 
-/* Main Content Container */
+/* Main Content */
 .container {
     max-width: 1200px;
     width: 90%;
@@ -68,68 +57,66 @@ nav a:hover {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex-grow: 1; /* Ensures the container expands properly */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-grow: 1;
 }
 
-/* Ensure sections are properly aligned and transition correctly */
+/* Sections */
 section {
-    width: 100%;
     display: none; /* Hide all sections by default */
     opacity: 0;
-    transition: none; /* Remove any transition effects */
-    text-align: center; /* Centers the text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensures the section takes up full height of the container */
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
 }
 
-/* Only the active section is visible */
 section.active {
-    display: flex; /* Show active section */
+    display: block;
     opacity: 1;
 }
 
 /* Contact Section */
 #contact {
-    text-align: center; /* Centers the text and form */
-    padding: 20px 0; /* Adjust top and bottom padding */
-    margin-top: 10px; /* Adds slight space between navigation and contact section */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers everything inside */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10px;
 }
 
-#contact h2, #contact p {
-    text-align: center; /* Ensures all text is centered */
-}
-
-/* Ensures the form is aligned properly */
 .form-container {
     width: 100%;
-    max-width: 500px; /* Prevents the form from getting too wide */
+    max-width: 500px;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: middle; /* Keeps form fields aligned middle */
 }
 
-/* Footer - Stays at Bottom */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    padding: 10px;
+.form-container input,
+.form-container textarea {
     width: 100%;
-    margin-top: auto;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-/* General Styling for the About Us Section */
+.form-container button {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.form-container button:hover {
+    background-color: darkblue;
+}
+
+/* About Section */
 #about {
     text-align: center;
     padding: 40px 20px;
@@ -145,36 +132,45 @@ footer {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #333; /* Darker text color for headings */
+    color: #333;
 }
 
-/* About Text Styling */
 .about-text p {
-    font-size: 18px; /* Smaller and more readable font size */
+    font-size: 18px;
     line-height: 1.7;
-    margin-bottom: 20px; /* Adds space between paragraphs */
-    color: #333; /* Dark text for readability */
-    text-align: left; /* Align text to the left for better readability */
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Highlight the 'What do we offer' section */
 .about-text p strong {
     font-weight: 700;
-    font-size: 20px; /* Slightly larger font for emphasis */
-    color: #4CAF50; /* A green color for emphasis */
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #about h2 {
-        font-size: 24px; /* Adjust heading size for smaller screens */
+        font-size: 24px;
     }
 
     .about-text p {
-        font-size: 16px; /* Adjust text size for better readability on mobile */
+        font-size: 16px;
     }
 
     nav a {
@@ -188,9 +184,5 @@ footer {
 
     footer {
         padding: 5px;
-    }
-
-    .logo {
-        height: 40px;
     }
 }
