@@ -60,17 +60,17 @@
         }
         
       /* Hide sections initially */
-section {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: none; /* Ensures sections are not taking up space */
-}
+      section {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          display: none;
+      }
 
-/* Only the active section is visible */
-section.active {
-    display: block; /* Show active section */
-    opacity: 1;
-}
+      /* Only the active section is visible */
+      section.active {
+          display: block;
+          opacity: 1;
+      }
         
         .footer {
             text-align: center;
@@ -78,68 +78,6 @@ section.active {
             background: rgba(0, 0, 0, 0.7);
             color: white;
             font-size: 14px;
-        }
-
-        /* Contact Section Fixes */
-        #contact {
-            text-align: left; /* Align text to the left */
-            padding: 20px;
-            margin-top: 40px; /* Adds space between nav and contact section */
-        }
-
-        #contact h2 {
-            margin-bottom: 20px;
-        }
-
-        #contact p {
-            margin-bottom: 10px;
-        }
-
-        .form-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .form-container input,
-        .form-container textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            box-sizing: border-box; /* Ensures padding doesn't affect width */
-        }
-
-        .form-container button {
-            background-color: royalblue;
-            color: white;
-            border: none;
-            padding: 14px 24px;
-            font-size: 18px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background 0.3s;
-            width: 100%;
-        }
-
-        .form-container button:hover {
-            background-color: darkblue;
-        }
-
-        /* Center the "Send Us a Message" header */
-        .form-container h3 {
-            text-align: center;
-        }
-
-        /* Add space between Send button and Contact Us text */
-        .form-container h2 {
-            margin-top: 30px; /* Adjust this value to your liking */
         }
     </style>
 </head>
@@ -161,31 +99,29 @@ section.active {
         <h2>Welcome to D&N Transport</h2>
         <p>Reliable and secure transportation solutions.</p>
     </section>
-  <section id="about">
-    <h2>About Us</h2>
-
-    <div class="about-text">
-        <p>
-            At D&N Transport, we specialize in making moving easy and stress-free. Whether you're relocating to a new home or need to transport your goods, we’ve got you covered.
-            But we don’t stop there! If you've purchased a car in another city and need a trusted driver to bring it to you safely, our team is ready to help.
-        </p>
-        <p>
-            As a newly established company, we are young, motivated, and committed to providing reliable, efficient, and secure transport services.
-            With a passion for growth and customer satisfaction, we strive to become your go-to transport solution.
-        </p>
-        <p>
-            <strong>What do we offer:</strong><br>
-            - Reliable Moving Assistance – Safe transport for your belongings<br>
-            - Car Delivery Services – We drive your new car home for you<br>
-            - Young & Motivated Team – Dedicated to excellent service
-        </p>
-    </div>
-
-    <h2>Let D&N Transport handle the heavy lifting while you focus on settling in. Contact us today!</h2>
-</section>
+  
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-text">
+            <p>
+                At D&N Transport, we specialize in making moving easy and stress-free. Whether you're relocating to a new home or need to transport your goods, we’ve got you covered.
+                But we don’t stop there! If you've purchased a car in another city and need a trusted driver to bring it to you safely, our team is ready to help.
+            </p>
+            <p>
+                As a newly established company, we are young, motivated, and committed to providing reliable, efficient, and secure transport services.
+                With a passion for growth and customer satisfaction, we strive to become your go-to transport solution.
+            </p>
+            <p>
+                <strong>What do we offer:</strong><br>
+                - Reliable Moving Assistance – Safe transport for your belongings<br>
+                - Car Delivery Services – We drive your new car home for you<br>
+                - Young & Motivated Team – Dedicated to excellent service
+            </p>
+        </div>
+        <h2>Let D&N Transport handle the heavy lifting while you focus on settling in. Contact us today!</h2>
+    </section>
 
     <section id="contact">
-        <!-- Contact Form -->
         <div class="form-container">
             <h3>Send Us a Message</h3>
             <form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
@@ -211,12 +147,9 @@ section.active {
 
 <script>
     function showSection(sectionId) {
-        // Hide all sections
         document.querySelectorAll('section').forEach(section => {
-            section.classList.remove('active'); // Remove active class
+            section.classList.remove('active');
         });
-
-        // Show the selected section with fade-in effect
         document.getElementById(sectionId).classList.add('active');
     }
 </script>
