@@ -188,15 +188,17 @@
     <!-- Add the JavaScript function here -->
 <script>
     function showSection(sectionId) {
-        // Hide all sections instantly
+        // Hide all sections but keep their alignment
         document.querySelectorAll('section').forEach(section => {
-            section.style.display = 'none'; // Instantly hide sections
-            section.classList.remove('active'); // Remove active class
+            section.classList.remove('active'); // Remove active class to fade out
+            setTimeout(() => {
+                section.style.display = "none"; // Hide after fade-out effect
+            }, 300); // Delay should match CSS transition time
         });
 
         // Show the selected section
         const activeSection = document.getElementById(sectionId);
-        activeSection.style.display = 'block'; // Make it visible
+        activeSection.style.display = "block"; // Make it visible immediately
         setTimeout(() => {
             activeSection.classList.add('active'); // Apply fade-in smoothly
         }, 10);
