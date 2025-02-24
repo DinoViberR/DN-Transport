@@ -103,8 +103,11 @@ section.active {
     align-items: center; /* Centers everything inside */
 }
 
-#contact h2, #contact p {
-    text-align: center; /* Ensures all text is centered */
+/* Centering the "Contact Us" text */
+#contact h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px; /* Adds spacing below the heading */
 }
 
 /* Ensures the form is aligned properly */
@@ -115,7 +118,14 @@ section.active {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Keeps form fields aligned left */
+    text-align: center; /* Centers text inside the form */
+}
+
+/* Center form elements */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures form elements are centered */
 }
 
 /* Footer - Stays at Bottom */
