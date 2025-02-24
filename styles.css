@@ -103,11 +103,8 @@ section.active {
     align-items: center; /* Centers everything inside */
 }
 
-/* Centering the "Contact Us" text */
-#contact h2 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px; /* Adds spacing below the heading */
+#contact h2, #contact p {
+    text-align: center; /* Ensures all text is centered */
 }
 
 /* Ensures the form is aligned properly */
@@ -118,21 +115,7 @@ section.active {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centers text inside the form */
-}
-
-/* Center form elements */
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures form elements are centered */
-}
-
-/* Center the "Send us a message" text */
-.form-container p {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 15px; /* Adds spacing below the paragraph */
+    text-align: left; /* Keeps form fields aligned left */
 }
 
 /* Footer - Stays at Bottom */
@@ -183,37 +166,6 @@ footer {
     font-size: 20px; /* Slightly larger font for emphasis */
     color: #4CAF50; /* A green color for emphasis */
 }
-.pig-image {
-    position: absolute; /* Ensures it covers the entire section */
-    top: 0;
-    left: 0;
-    width: 100%; /* Stretches the image to fit */
-    height: 100%; /* Ensures full coverage */
-    object-fit: cover; /* Ensures the image covers the section properly */
-    opacity: 0.5; /* Adjust transparency to match the overlay */
-    z-index: -1; /* Pushes it behind the text */
-}
-
-.form-container h3 {
-    text-align: center; /* Center the text */
-    width: 100%;
-    font-size: 24px; /* Slightly larger text */
-    font-weight: bold;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-}
-#home {
-    position: relative; /* Ensures child elements (image) are positioned correctly */
-    height: 100vh; /* Makes sure the section takes full screen height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Keeps text readable */
-}
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
