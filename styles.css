@@ -167,6 +167,23 @@ footer {
     color: #4CAF50; /* A green color for emphasis */
 }
 
+.hover-image-container {
+    position: relative;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.hover-image-container img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0; /* Initially hidden */
+}
+
+#home:hover .hover-image-container img {
+    opacity: 1; /* Instantly show image on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #about h2 {
