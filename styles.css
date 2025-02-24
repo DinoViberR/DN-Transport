@@ -184,14 +184,16 @@ footer {
     color: #4CAF50; /* A green color for emphasis */
 }
 .pig-image {
-    display: block;
-    margin: 20px auto; /* Centers the image */
-    max-width: 100%; /* Ensures it scales within the container */
-    width: 100%; /* Makes it fully fit inside the section */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 10px; /* Matches the container’s rounded corners */
-    opacity: 0.9; /* Adjust transparency to match the overlay effect */
+    position: absolute; /* Ensures it covers the entire section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretches the image to fit */
+    height: 100%; /* Ensures full coverage */
+    object-fit: cover; /* Ensures the image covers the section properly */
+    opacity: 0.5; /* Adjust transparency to match the overlay */
+    z-index: -1; /* Pushes it behind the text */
 }
+
 .form-container h3 {
     text-align: center; /* Center the text */
     width: 100%;
