@@ -13,6 +13,15 @@ html, body {
     background: url('images/file-8Z54pimwsPg1CeewwXTNyU.webp') no-repeat center center fixed;
     background-size: cover;
 }
+.hover-image-container img {
+    width: 100%; /* Make it fit the container */
+    max-width: 800px; /* Prevent it from being too large */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* Center the image */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+}
 
 /* Body Styling */
 body {
