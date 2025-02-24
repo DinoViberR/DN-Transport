@@ -186,11 +186,13 @@ footer {
 .pig-image {
     display: block;
     margin: 20px auto; /* Centers the image */
-    max-width: 100%; /* Ensures it doesn't overflow */
-    width: 300px; /* Adjust size as needed */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+    max-width: 100%; /* Ensures it scales within the container */
+    width: 100%; /* Makes it fully fit inside the section */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px; /* Matches the container’s rounded corners */
+    opacity: 0.9; /* Adjust transparency to match the overlay effect */
 }
+
 
 
 /* Responsive Design */
