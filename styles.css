@@ -107,7 +107,7 @@ section.active {
 #contact h2 {
     text-align: center;
     width: 100%;
-    margin-bottom: 20px; /* Adds spacing below the heading */
+    margin-bottom: 10px; /* Adds spacing below the heading */
 }
 
 /* Ensures the form is aligned properly */
@@ -126,6 +126,13 @@ section.active {
     display: flex;
     flex-direction: column;
     align-items: center; /* Ensures form elements are centered */
+}
+
+/* Center the "Send us a message" text */
+.form-container p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px; /* Adds spacing below the paragraph */
 }
 
 /* Footer - Stays at Bottom */
