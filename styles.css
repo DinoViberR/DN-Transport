@@ -193,6 +193,19 @@ footer {
     opacity: 1; /* Instantly show image on hover */
 }
 
+/* Ensure only non-active sections are hidden */
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+/* Keep the home section always visible */
+#home {
+    display: block !important;  /* Forces the home section to be shown */
+    opacity: 1;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #about h2 {
