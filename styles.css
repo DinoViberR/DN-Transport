@@ -204,6 +204,14 @@ footer {
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
 }
+#home {
+    position: relative; /* Ensures child elements (image) are positioned correctly */
+    height: 100vh; /* Makes sure the section takes full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Keeps text readable */
+}
 
 
 
