@@ -192,6 +192,12 @@ footer {
     border-radius: 10px; /* Matches the container’s rounded corners */
     opacity: 0.9; /* Adjust transparency to match the overlay effect */
 }
+.form-container h3 {
+    text-align: center; /* Centers the text */
+    width: 100%; /* Ensures it takes full width */
+    font-size: 22px; /* Optional: Adjust font size */
+    margin-bottom: 15px; /* Adds spacing below */
+}
 
 
 
