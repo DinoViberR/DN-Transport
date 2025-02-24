@@ -59,18 +59,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         
-        /* Hide sections initially */
-        section {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            display: none; /* Ensures sections are not taking up space */
-        }
+      /* Hide sections initially */
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Ensures sections are not taking up space */
+}
 
-        /* Only the active section is visible */
-        section.active {
-            display: block; /* Show active section */
-            opacity: 1;
-        }
+/* Only the active section is visible */
+section.active {
+    display: block; /* Show active section */
+    opacity: 1;
+}
         
         .footer {
             text-align: center;
@@ -130,11 +130,6 @@
 
         .form-container button:hover {
             background-color: darkblue;
-        }
-
-        /* Center h3 in the form container */
-        .form-container h3 {
-            text-align: center;
         }
     </style>
 </head>
@@ -217,6 +212,7 @@
         document.getElementById(sectionId).classList.add('active');
     }
 </script>
+
 
 </body>
 </html>
