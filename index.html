@@ -131,6 +131,11 @@
         .form-container button:hover {
             background-color: darkblue;
         }
+
+        /* Center h3 in the form container */
+        .form-container h3 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -155,7 +160,7 @@
     <img src="images/Fast & Reliable Moving & Transport Services.png" alt="Cute Pig" class="pig-image">
 </section>
 
-<section id="about">
+  <section id="about">
     <h2>About Us</h2>
 
     <div class="about-text">
@@ -177,32 +182,30 @@
 
     <h2>Let D&N Transport handle the heavy lifting while you focus on settling in. Contact us today!</h2>
 </section>
-
-<section id="contact"> 
-    <h2>Contact Us</h2>
-    <div class="form-container">
-        <h3>Send Us a Message</h3>
-        <form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-    <p>Email: dntransport.info@gmail.com</p>
-    <p>Facebook: D&N Transport</p>
-    <p>Nino: +49 176 419 56993</p>
-    <p>Dino: +49 255 655 05939</p>
-    <p>Germany</p>
-</section>
-
+    <section id="contact"> 
+        <!-- Contact Form -->
+        <div class="form-container">
+            <h3>Send Us a Message</h3>
+            <form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        <h2>Contact Us</h2>
+        <p>Email: dntransport.info@gmail.com</p>
+        <p>Facebook: D&N Transport</p>
+        <p>Nino: +49 176 419 56993</p>
+        <p>Dino: +49 255 655 05939</p>
+        <p>Germany</p>
+        </div>
+    </section>
 </div>
 
 <footer class="footer">
     <p>&copy; 2025 D&N Transport. All rights reserved.</p>
 </footer>
-
-<!-- Add the JavaScript function here -->
+    <!-- Add the JavaScript function here -->
 <script>
     function showSection(sectionId) {
         // Hide all sections
