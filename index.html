@@ -58,31 +58,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-           /* Customer reviews styling */
-        .review-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .review {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            margin: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .review-text {
-            font-style: italic;
-        }
-
-        .customer-name {
-            font-weight: bold;
-            margin-top: 10px;
-        }
+        
       /* Hide sections initially */
 section {
     opacity: 0;
@@ -168,7 +144,6 @@ section.active {
     <a onclick="showSection('home')">Home</a>
     <a onclick="showSection('about')">About Us</a>
     <a onclick="showSection('contact')">Contact</a>
-    <a onclick="showSection('reviews')">Customer Reviews</a>
 </nav>
 
 <div class="container">
@@ -198,27 +173,6 @@ section.active {
 
       <h2>Let D&N Transport handle the heavy lifting while you focus on settling in. Contact us today!</h2>
 </section>
-    <!-- Section 3: White Background (Customer Reviews Section) -->
-    <section id="reviews" class="section-white-2">
-        <div class="content">
-            <h2>Customer Reviews</h2>
-            <div class="review-container">
-                <div class="review">
-                    <p class="review-text">"D&N Transport made our move so much easier! The team was professional, fast, and very friendly. I highly recommend them!"</p>
-                    <p class="customer-name">- John Doe</p>
-                </div>
-                <div class="review">
-                    <p class="review-text">"Amazing car delivery service. My new car arrived safely and on time. Will definitely use them again!"</p>
-                    <p class="customer-name">- Sarah Smith</p>
-                </div>
-                <div class="review">
-                    <p class="review-text">"Great experience. The movers were polite, efficient, and handled everything with care. Highly satisfied!"</p>
-                    <p class="customer-name">- Mark Williams</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <section id="contact">      
         <!-- Contact Form -->
