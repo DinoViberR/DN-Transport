@@ -73,33 +73,25 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
 }
-#reviews {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
+.reviews-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.review-slide {
+    display: none;
     text-align: center;
-}
-
-#reviews h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.review-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Allows for responsive layout */
-}
-
-.review {
-    background-color: white;
     padding: 20px;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: left;
-    flex: 1;
+}
+
+.review-slide.active {
+    display: block;
 }
 
 .review-text {
