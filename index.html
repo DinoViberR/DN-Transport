@@ -230,7 +230,30 @@ section.active {
     }
 
 </script>
-
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.review-slide');
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length; // Loop back to first slide after last
+        showSlide(currentSlide);
+    }
+    
+    // Automatically change the slide every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+    // Show the first slide initially
+    showSlide(currentSlide);
+</script>
 
 </body>
 </html>
