@@ -14,11 +14,31 @@ html, body {
     background-size: cover;
 }
 
-/* Home Page Image - Full Page Cover */
-#home .hover-image-container img {
+/* Home Page - Full Page Cover Image */
+#home {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#home .hover-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+#home .hover-image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+/* Hide Home Page Text */
+#home h2, #home p {
+    display: none;
 }
 
 /* Body Styling */
@@ -94,7 +114,7 @@ section.active {
 
 /* Keep the home section always visible */
 #home {
-    display: block !important;
+    display: flex !important;
     opacity: 1;
 }
 
