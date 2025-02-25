@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D&N Transport - Sicherheit und vertrauen in jeder bewegung">
+    <meta name="keywords" content="transport, logistics, shipping, D&N Transport">
+    <meta name="author" content="D&N Transport">
     <title>D&N Transport</title>
     <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+        
         body {
             font-family: 'Oswald', sans-serif;
             margin: 0;
             padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
         }
         
         header {
@@ -33,10 +40,13 @@
             padding: 14px 25px;
             text-decoration: none;
             display: inline-block;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out;
         }
         
         nav a:hover {
             background-color: royalblue;
+            color: white;
             border-radius: 5px;
         }
 
@@ -46,44 +56,84 @@
             padding: 20px;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        
+      /* Hide sections initially */
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Ensures sections are not taking up space */
+}
 
-        /* Hide sections initially */
-        section {
-            display: none;
-        }
-
-        /* Show only active section */
-        section.active {
-            display: block;
-        }
-
-        /* Full-page background image for home */
-        #home {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background: url('images/Fast & Reliable Moving & Transport Services.png') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
+/* Only the active section is visible */
+section.active {
+    display: block; /* Show active section */
+    opacity: 1;
+}
+        
         .footer {
             text-align: center;
             padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             color: white;
+            font-size: 14px;
+        }
+
+        /* Contact Section Fixes */
+        #contact {
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            margin-top: 40px; /* Adds space between nav and contact section */
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        .form-container button {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: darkblue;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>D&N Transport</h1>
-</header>
 
 <header>
     <h1>D&N Transport</h1>
