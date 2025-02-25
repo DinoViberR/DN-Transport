@@ -117,7 +117,16 @@ section.active {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left; /* Keeps form fields aligned left */
 }
+/* Center the form title */
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 20px; /* Adds space below the title */
+}
 
+/* Add space between the form and the contact information */
+#contact .form-container {
+    margin-bottom: 40px; /* Adds spacing below the form */
+}
 /* Footer - Stays at Bottom */
 footer {
     background-color: #333;
