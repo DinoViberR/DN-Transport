@@ -85,6 +85,11 @@
     <h1>D&N Transport</h1>
 </header>
 
+<header>
+    <h1>D&N Transport</h1>
+    <p>Sicherheit und vertrauen in jeder bewegung</p>
+</header>
+
 <nav>
     <a onclick="showSection('home')">Home</a>
     <a onclick="showSection('about')">About Us</a>
@@ -93,34 +98,72 @@
 
 <div class="container">
     <section id="home" class="active">
-        <h2>Welcome to D&N Transport</h2>
-        <p>Reliable and secure transportation solutions.</p>
-    </section>
+    <h2>Welcome to D&N Transport</h2>
+    <p>Reliable and secure transportation solutions.</p>
+    <div class="hover-image-container">
+        <img src="images/Fast & Reliable Moving & Transport Services.png" alt="Transport Image">
+    </div>
+</section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide secure and reliable transport services.</p>
-    </section>
+  <section id="about">
+    <h2>About Us</h2>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
+    <div class="about-text">
+        <p>
+            At D&N Transport, we specialize in making moving easy and stress-free. Whether you're relocating to a new home or need to transport your goods, weâ€™ve got you covered.
+            But we donâ€™t stop there! If you've purchased a car in another city and need a trusted driver to bring it to you safely, our team is ready to help.
+        </p>
+        <p>
+            As a newly established company, we are young, motivated, and committed to providing reliable, efficient, and secure transport services.
+            With a passion for growth and customer satisfaction, we strive to become your go-to transport solution.
+        </p>
+        <p>
+            <strong>What do we offer:</strong><br>
+            - Reliable Moving Assistance â€“ Safe transport for your belongings<br>
+            - Car Delivery Services â€“ We drive your new car home for you<br>
+            - Young & Motivated Team â€“ Dedicated to excellent service
+        </p>
+    </div>
+
+    <h2>Let D&N Transport handle the heavy lifting while you focus on settling in. Contact us today!</h2>
+</section>
+
+    <section id="contact">      
+        <!-- Contact Form -->
+        <div class="form-container">
+            <h3>Send Us a Message</h3>
+            <form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+<h2>Contact Us</h2>
         <p>Email: dntransport.info@gmail.com</p>
-        <p>Phone: +49 176 419 56993</p>
+        <p>Facebook: D&N Transport</p>
+        <p>Nino: +49 176 419 56993</p>
+        <p>Dino: +49 255 655 05939</p>
+        <p>Germany</p>
+        </div>
     </section>
 </div>
 
 <footer class="footer">
     <p>&copy; 2025 D&N Transport. All rights reserved.</p>
 </footer>
-
+    <!-- Add the JavaScript function here -->
 <script>
     function showSection(sectionId) {
+        // Hide all sections
         document.querySelectorAll('section').forEach(section => {
-            section.classList.remove('active');
+            section.classList.remove('active'); // Remove active class
         });
+
+        // Show the selected section with fade-in effect
         document.getElementById(sectionId).classList.add('active');
     }
 </script>
+
 
 </body>
 </html>
