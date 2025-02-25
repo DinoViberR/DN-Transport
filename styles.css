@@ -96,7 +96,7 @@ section.active {
 /* Contact Section */
 #contact {
     text-align: center; /* Centers the text and form */
-    padding: 20px 0; /* Adjust top and bottom padding */
+    padding: 20px; /* Adjust top and bottom padding */
     margin-top: 10px; /* Adds slight space between navigation and contact section */
     display: flex;
     flex-direction: column;
