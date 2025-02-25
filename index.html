@@ -18,52 +18,90 @@
             font-size: 18px;
             line-height: 1.6;
         }
-
-        /* Full-screen sections */
-        section {
-            padding: 100px 20px;
+        
+        header {
+            background-color: rgba(65, 105, 225, 0.8);
+            color: white;
+            padding: 20px;
             text-align: center;
         }
-
-        /* Section 1: White Background */
-        .section-white {
-            background-color: white;
-            color: black;
+        
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
-
-        /* Section 2: Blue Background */
-        .section-blue {
-            background-color: #4169E1; /* Royal blue */
+        
+        nav a {
             color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        nav a:hover {
+            background-color: royalblue;
+            color: white;
+            border-radius: 5px;
         }
 
-        /* Section 3: White Background */
-        .section-white-2 {
-            background-color: white;
-            color: black;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .content {
-            max-width: 900px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+           /* Customer reviews styling */
+        .review-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .content img {
+        .review {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
             width: 100%;
-            max-width: 500px;
-            margin: 20px auto;
-            display: block;
-            border-radius: 8px;
         }
 
-        .content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
+        .review-text {
+            font-style: italic;
+        }
+
+        .customer-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+      /* Hide sections initially */
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Ensures sections are not taking up space */
+}
+
+/* Only the active section is visible */
+section.active {
+    display: block; /* Show active section */
+    opacity: 1;
+}
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 14px;
         }
 
         /* Contact Section Fixes */
@@ -117,45 +155,6 @@
         .form-container button:hover {
             background-color: darkblue;
         }
-
-        /* Hide sections initially */
-        section {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            display: none; /* Ensures sections are not taking up space */
-        }
-
-        /* Only the active section is visible */
-        section.active {
-            display: block; /* Show active section */
-            opacity: 1;
-        }
-
-        /* Customer reviews styling */
-        .review-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .review {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            margin: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .review-text {
-            font-style: italic;
-        }
-
-        .customer-name {
-            font-weight: bold;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -173,36 +172,32 @@
 </nav>
 
 <div class="container">
-    <!-- Section 1: White Background (Home Section) -->
-    <section id="home" class="section-white active">
-        <div class="content">
-            <h2>Welcome to D&N Transport</h2>
-            <p>Reliable and secure transportation solutions that make moving a breeze.</p>
-            <img src="images/Fast & Reliable Moving & Transport Services.png" alt="">
-        </div>
+    <section id="home" class="active">
+        <h2>Welcome to D&N Transport</h2>
+        <p>Reliable and secure transportation solutions.</p>
     </section>
+  <section id="about">
+    <h2>About Us</h2>
 
-    <!-- Section 2: Blue Background (About Us Section) -->
-    <section id="about" class="section-blue">
-        <div class="content">
-            <h2>About Us</h2>
-            <p>
-                At D&N Transport, we specialize in making moving easy and stress-free. Whether you're relocating to a new home or need to transport your goods, we’ve got you covered.
-                But we don’t stop there! If you've purchased a car in another city and need a trusted driver to bring it to you safely, our team is ready to help.
-            </p>
-            <p>
-                As a newly established company, we are young, motivated, and committed to providing reliable, efficient, and secure transport services.
-                With a passion for growth and customer satisfaction, we strive to become your go-to transport solution.
-            </p>
-            <p>
-                <strong>What do we offer:</strong><br>
-                - Reliable Moving Assistance – Safe transport for your belongings<br>
-                - Car Delivery Services – We drive your new car home for you<br>
-                - Young & Motivated Team – Dedicated to excellent service
-            </p>
-        </div>
-    </section>
+    <div class="about-text">
+        <p>
+            At D&N Transport, we specialize in making moving easy and stress-free. Whether you're relocating to a new home or need to transport your goods, we’ve got you covered.
+            But we don’t stop there! If you've purchased a car in another city and need a trusted driver to bring it to you safely, our team is ready to help.
+        </p>
+        <p>
+            As a newly established company, we are young, motivated, and committed to providing reliable, efficient, and secure transport services.
+            With a passion for growth and customer satisfaction, we strive to become your go-to transport solution.
+        </p>
+        <p>
+            <strong>What do we offer:</strong><br>
+            - Reliable Moving Assistance – Safe transport for your belongings<br>
+            - Car Delivery Services – We drive your new car home for you<br>
+            - Young & Motivated Team – Dedicated to excellent service
+        </p>
+    </div>
 
+      <h2>Let D&N Transport handle the heavy lifting while you focus on settling in. Contact us today!</h2>
+</section>
     <!-- Section 3: White Background (Customer Reviews Section) -->
     <section id="reviews" class="section-white-2">
         <div class="content">
@@ -224,8 +219,9 @@
         </div>
     </section>
 
-    <!-- Section 4: Blue Background (Contact Section) -->
-    <section id="contact" class="section-blue">
+
+    <section id="contact">      
+        <!-- Contact Form -->
         <div class="form-container">
             <h2>Send Us a Message</h2>
             <form action="mailto:dntransport.info@gmail.com" method="post" enctype="text/plain">
@@ -234,24 +230,24 @@
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
-        </div>
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: dntransport.info@gmail.com</p>
-            <p>Facebook: D&N Transport</p>
-            <p>Nino: +49 176 419 56993</p>
-            <p>Dino: +49 255 655 05939</p>
-            <p>Germany</p>
+<br>
+<br>
+<h2>Contact Us</h2>
+        <p>Email: dntransport.info@gmail.com</p>
+        <p>Facebook: D&N Transport</p>
+        <p>Nino: +49 176 419 56993</p>
+        <p>Dino: +49 255 655 05939</p>
+        <p>Germany</p>
         </div>
     </section>
 </div>
 
-<footer>
+<footer class="footer">
     <p>&copy; 2025 D&N Transport. All rights reserved.</p>
 </footer>
-
+    <!-- Add the JavaScript function here -->
 <script>
-    function showSection(sectionId) {
+     function showSection(sectionId) {
         // Hide all sections
         document.querySelectorAll('section').forEach(section => {
             section.classList.remove('active'); // Remove active class
@@ -260,7 +256,9 @@
         // Show the selected section with fade-in effect
         document.getElementById(sectionId).classList.add('active');
     }
+
 </script>
+
 
 </body>
 </html>
