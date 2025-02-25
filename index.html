@@ -199,15 +199,19 @@ section.active {
 </footer>
     <!-- Add the JavaScript function here -->
 <script>
-    function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.remove('active'); // Remove active class
-        });
+  function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+        section.style.display = "none"; // Ensure they are hidden
+    });
 
-        // Show the selected section with fade-in effect
-        document.getElementById(sectionId).classList.add('active');
-    }
+    // Show the selected section
+    const activeSection = document.getElementById(sectionId);
+    activeSection.classList.add('active');
+    activeSection.style.display = "block"; // Ensure it's visible
+}
+
 </script>
 
 
