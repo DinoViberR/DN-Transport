@@ -73,37 +73,6 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
 }
-.reviews-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.review-slide {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.review-slide.active {
-    display: block;
-}
-
-.review-text {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.customer-name {
-    font-weight: bold;
-    color: #333;
-}
 
 /* Ensure sections are properly aligned and transition correctly */
 section {
@@ -127,7 +96,7 @@ section.active {
 /* Contact Section */
 #contact {
     text-align: center; /* Centers the text and form */
-    padding: 20px; /* Adjust top and bottom padding */
+    padding: 20px 0; /* Adjust top and bottom padding */
     margin-top: 10px; /* Adds slight space between navigation and contact section */
     display: flex;
     flex-direction: column;
