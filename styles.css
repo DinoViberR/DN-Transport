@@ -13,15 +13,6 @@ html, body {
     background: url('images/file-8Z54pimwsPg1CeewwXTNyU.webp') no-repeat center center fixed;
     background-size: cover;
 }
-.hover-image-container img {
-    width: 100%; /* Make it fit the container */
-    max-width: 800px; /* Prevent it from being too large */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin: 20px auto; /* Center the image */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
-}
 
 /* Body Styling */
 body {
@@ -174,36 +165,6 @@ footer {
     font-weight: 700;
     font-size: 20px; /* Slightly larger font for emphasis */
     color: #4CAF50; /* A green color for emphasis */
-}
-
-.hover-image-container {
-    position: relative;
-    width: 100%; 
-    text-align: center; 
-    margin-top: 20px;
-}
-
-.hover-image-container img {
-    width: 300px; /* Adjust size as needed */
-    height: auto;
-    opacity: 0; /* Initially hidden */
-}
-
-#home:hover .hover-image-container img {
-    opacity: 1; /* Instantly show image on hover */
-}
-
-/* Ensure only non-active sections are hidden */
-section {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: none;
-}
-
-/* Keep the home section always visible */
-#home {
-    display: block !important;  /* Forces the home section to be shown */
-    opacity: 1;
 }
 
 /* Responsive Design */
