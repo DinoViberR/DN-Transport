@@ -143,8 +143,47 @@ section.active {
 <nav>
     <a onclick="showSection('home')">Home</a>
     <a onclick="showSection('about')">About Us</a>
+    <a onclick="showSection('reviews')">Reviews</a>
     <a onclick="showSection('contact')">Contact</a>
 </nav>
+
+<div class="container">
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+            <p><strong>John Doe</strong></p>
+            <p>"D&N Transport provided excellent service! My belongings arrived safely and on time. Highly recommend!"</p>
+        </div>
+        <div class="review">
+            <p><strong>Sarah Smith</strong></p>
+            <p>"Great experience! The team was professional and friendly. Would definitely use their services again."</p>
+        </div>
+        <div class="review">
+            <p><strong>Michael Brown</strong></p>
+            <p>"Reliable and affordable. They took great care of my furniture during the move."</p>
+        </div>
+    </section>
+</div>
+
+<style>
+    .review {
+        background: #f9f9f9;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
 
 <div class="container">
     <section id="home" class="active">
